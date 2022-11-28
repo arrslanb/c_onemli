@@ -11,9 +11,9 @@ int dikdortgenalan(int a,int b){
 	return sonuc;
 	
 }
-int cemberalan(int a){
+float cemberalan(int a){
 	
-	int sonuc = 2*PI*(a*a);
+	float sonuc = 2*PI*(a*a);
 	return sonuc;
 }
 
@@ -31,25 +31,25 @@ return fact;
 	
 
 }
-int xsin(int a){
+double xsin(int a){
 	
-	int sonuc = sin(a);
+	double sonuc = sin(a);
 	
 return sonuc;
 }
-int xcos(int a){
+double xcos(int a){
 	
-	int sonuc = cos(a);
+	double sonuc = cos(a);
 	return sonuc;
 }
-int xtan(int a){
+double xtan(int a){
 	
-	int sonuc = tan(a);
+	double sonuc = sin(a)/cos(a);
 	return sonuc;
 }
-int xcot(int a){
+double xcot(int a){
 	
-int sonuc = cos(a)/sin(a);
+double sonuc = cos(a)/sin(a);
 return sonuc;
 }
 int main(){
@@ -88,7 +88,7 @@ scanf("%d",&islem);
 	printf("Cember Yaricapini Giriniz:");
 	scanf("%d",&a);
 	cemberalan(a);
-    printf("Sonuc=%d",cemberalan(a));
+    printf("Sonuc=%.2f",cemberalan(a));
 	break;
 	
 	case 4:
@@ -103,28 +103,28 @@ scanf("%d",&islem);
 	printf("Sin Degerinin Hesaplanmasini Istediginiz Degeri Giriniz:");
 	scanf("%d",&a);
 	xsin(a);
-	printf("Sonuc=%d",xsin(a));
+	printf("Sonuc=%f",xsin(a));
 	break;
 	
 	case 6:
 	printf("Cos Degerinin Hesaplanmasini Istediginiz Degeri Giriniz:");
 	scanf("%d",&a);
 	xcos(a);
-	printf("Sonuc=%d",xcos(a));
+	printf("Sonuc=%f",xcos(a));
 	break;
 
 	case 7:
 	printf("Tan Degerinin Hesaplanmasini Istediginiz Degeri Giriniz:");
 	scanf("%d",&a);
 	xtan(a);
-	printf("Sonuc=%d",xtan(a));
+	printf("Sonuc=%f",xtan(a));
 	break;
 	
 	case 8:	
 	printf("Cot Degerinin Hesaplanmasini Istediginiz Degeri Giriniz:");
 	scanf("%d",&a);
 	xcot(a);
-	printf("Sonuc=%d",xcot(a));	
+	printf("Sonuc=%f",xcot(a));	
 	break;
 	
 	default:
