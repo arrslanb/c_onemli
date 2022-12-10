@@ -4,6 +4,7 @@
 #include<Windows.h>
 #define bakiye 1312
 #define isim "BATUHAN"
+#define guvenlik "aslan"
 // ana islemlerimiz için deðer döndüren  fonksiyonlar oluþturdum.
 int paracekme(int sayi){
 
@@ -31,6 +32,8 @@ int havaleeft(int sayi){
 	
 }
 int main(){
+int sayac=0;
+char gecguvenlik[30];	
 int hesapno = 123;         //havale eft yapýlacak hesap numarasý
 int gechesapno;	          //hesapno kýyas
 int islemler,sayi;
@@ -38,21 +41,26 @@ int kontrol = 0;
 int sifre = 13;
 int gecsifre;           //kýyas yapmak için
 char cevap={'e','h','H','E'} ;      // e veya h
-yeniden:;
 printf("\n\t\t\t\t\t\t**BATUBANKA HOSGELDINIZ**\n");
+yeniden:;
 for(;;){        //islemler doðru girilene kadar sonsuz döngü islemler doðru girilene kadar
 	printf("\n\nLUTFEN SIFRENIZI GIRINIZ!");
 	scanf("%d",&gecsifre);
 	fflush(stdin);
 	if(gecsifre!=sifre){
+		sayac++;
 		printf("YANLIS SIFRE!!");
 		goto yeniden;
-		
-	}
+}
+else if(sayac==3){
+	goto guvenliksorunu;
+}
 	else{
 		printf("SIFRENIZ DOGRULANMAKTADIR!\n");
 		printf("HOSGELDINIZ %s BEY\n\n",isim);
 	}
+	
+
 	break;
 }	
 ikincidefaislem:;
@@ -61,6 +69,7 @@ printf("1-PARA CEKME.\n");
 printf("2-PARA YATIRMA.\n");
 printf("3-HAVELE/EFT.\n");
 printf("4-BAKIYE SORGULAMA.\n");
+printf("5-KART IADE.\n");
 
 printf("LUTFEN YAPMAK ISTEDIGINIZ ISLEMI TUSLAYINIZ!");
 scanf("%d",&islemler);
@@ -119,10 +128,15 @@ switch(islemler){
 		    int d = bakiyesorgulama(sayi);
 		    printf("BAKIYENIZ %d TL'dir.\n",d);
 	        break;
-	       
+	       case 5:
+	       	guvenliksorunu:;
+	       	printf("KARTINIZ IADE EDILIYOR!!\n");
+	       	 Sleep(1000); 
+		    system("CLS");
+		    break;
 	       default :
-	       	 Sleep(1000); //gerçekçilik için
-		    system("CLS"); //gerçekçilik için
+	       	 Sleep(1000); 
+		    system("CLS"); 
 	       printf("ATM'MIZ KISA SURELIGINE ARIZALIDIR!\n");
 	      break;
 	
